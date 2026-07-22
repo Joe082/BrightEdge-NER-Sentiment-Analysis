@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.cache/
+runs/
+.env
+.pytest_cache/
+local_env.sh

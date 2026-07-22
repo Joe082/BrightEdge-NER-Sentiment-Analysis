@@ -1,0 +1,6 @@
+anthropic>=0.40
+fastapi>=0.110
+uvicorn>=0.29
+pytest>=8.0
+# optional fallback provider (auto-detected via OPENAI_API_KEY):
+openai>=1.40
