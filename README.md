@@ -74,6 +74,9 @@ Honest failure modes, verified against the labeled test set (`eval/testset.jsonl
 
 `eval/eval.py` scores against 28 hand-labeled cases (the 4 official examples plus edge cases: alias merging, rebrands, URL-only domains, sarcasm, exclusions, no-entity text). Metrics: entity-level precision/recall/F1 (alias-aware matching), then domain accuracy and sentiment accuracy over true positives. Predictions are cached to `runs/` so scoring re-runs are free.
 
+<img width="321" height="120" alt="Screenshot 2026-07-22 at 4 20 32 PM" src="https://github.com/user-attachments/assets/be064ec9-fbf1-4b29-9e5e-ec1320f62e54" />
+
+
 **Measured results** (2026-07-22, `deepseek-ai/DeepSeek-V4-Flash` via an OpenAI-compatible endpoint, temperature 0, DNS verification on): entity precision **1.000**, recall **1.000**, F1 **1.000** (36 TP / 0 FP / 0 FN over 28 cases), domain accuracy **1.000**, sentiment accuracy **1.000** — including the `hard`-tagged sarcasm, rebrand, and name-collision cases. A batch run over 10 documents from the provided real corpus resolved long-tail domains from in-text URL evidence (e.g. Industrial Training International → iti.com, Nationwide Crane Training → nationwidecranetraining.com) and correctly returned `null` domains for local businesses with no verifiable site rather than guessing. Results will vary somewhat by model; the harness makes any model swap a one-command re-measurement.
 
 ### Using other providers
