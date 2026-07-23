@@ -12,6 +12,9 @@
 Language: **Python 3.10+**. Approach: **LLM extraction wrapped in deterministic verification layers**. Part 2 (scale design) and Part 3 (PoC plan) are in [`docs/`](docs/).
 
 ## Quick start
+Entity extraction demo: https://brightedge-ner-sentiment-analysis-f5qd.onrender.com/
+
+## Quick start
 
 ```bash
 pip install -r requirements.txt
